@@ -8,7 +8,14 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "clean": "./node_modules/.bin/del-cli './target/webapp'",
+    "test.phantomjs": " ng test --watch=false --single-run true --browsers PhantomJS",
+    "test.ie": " ng test --browsers IE",
+    "test.edge": " ng test --browsers Edge",
+    "compodoc": "./node_modules/.bin/compodoc -p src/main/frontend/tsconfig.app.json",
+    "compodoc.serve": "./node_modules/.bin/compodoc --serve",
+    "make.target": "mkdir target"
   },
   "private": true,
   "dependencies": {
