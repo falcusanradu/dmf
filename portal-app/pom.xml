@@ -6,13 +6,21 @@
   <groupId>com.devglan</groupId>
   <artifactId>portal-app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>portal-app</name>
   <description>Demo project for Spring Boot</description>
 
   <build>
     <plugins>
+
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
 
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
